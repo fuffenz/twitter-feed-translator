@@ -79,7 +79,7 @@ $options = get_option('fz_tft');
 <?php
 }
 
-// this is called from a filter initiated in the plugin Twitter Feed Pro
+// this is called from a filter initiated in the plugin Twitter Widget Pro
 function fz_tweet_translator($content = null)
 {
 	$options = get_option('fz_tft'); 
@@ -239,6 +239,6 @@ register_uninstall_hook(__FILE__, 'fz_tft_uninstall');
 add_action('admin_init', 'fz_tft_init');
 add_action('admin_menu', 'fz_tft_menu');
 
-// add a filter for Twitter Feed Pro
+// add a filter for Twitter Widget Pro
 add_filter('widget_twitter_content', 'fz_tweet_translator');
 	
